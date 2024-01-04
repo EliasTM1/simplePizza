@@ -1,4 +1,4 @@
-import { Heading, VStack } from "@chakra-ui/react";
+import { Grid, Heading, VStack } from "@chakra-ui/react";
 import { MenuItem } from "./MenuItem";
 import { PizzaMenuItem, pizzaData } from "./mocks/mock";
 
@@ -6,18 +6,20 @@ const Menu = () => {
 	return (
 		<VStack alignItems='center' gap='4'>
 			<Heading
-				as='h2'
+				// as='h2'
 				display='inline-block'
 				padding='1rem 0'
-				border-top='2px solid currentColor'
-				border-bottom='2px solid currentColor'
-				font-size='2.4rem'
-				text-transform='uppercase'
-				letter-spacing='3px'
-				font-weight='500'
+				borderTop='2px solid black'
+				borderBottom='2px solid black'
+				fontSize='2.4rem'
+				textTransform='uppercase'
+				letterSpacing='3px'
+				fontWeight='500'
+				marginBottom="1rem"
 			>
 				Our Menu
 			</Heading>
+			<Grid gridTemplateColumns="1fr 1fr" gap="4.8rem">
 			{pizzaData.map((e: PizzaMenuItem, index: number) => (
 				<MenuItem
 					key={index}
@@ -28,6 +30,7 @@ const Menu = () => {
 					soldOut={e.soldOut}
 				/>
 			))}
+			</Grid>
 		</VStack>
 	);
 };

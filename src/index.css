@@ -89,11 +89,13 @@
 
 .pizza.sold-out {
   color: #888;
+  cursor: not-allowed;
 }
 
 .pizza.sold-out img {
   filter: grayscale();
   opacity: 0.8;
+  
 }
 
 /* *************** */

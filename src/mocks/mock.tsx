@@ -1,10 +1,9 @@
-export type PizzaMenuItem = {
+export interface PizzaMenuItem  {
     name: string,
     ingredients: string,
     price:  number,
     photoName: string,
     soldOut: boolean
-    
 }
 
 export const pizzaData: PizzaMenuItem[] = [
